@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+
+/* Set the color and rounded corners of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+/* Set the color and rounded corners of the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: white; /* Replace "red" with your desired color */
+}
+
+
+h1 {
+  color: white;
+  font-size: 7rem;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+ol {
+  margin-left: 20px;
+  color: white;
+}
+
+li {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+th {
+  color: black;
+}
+
+td {
+  color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.gradient-section {
+  background: #6190E8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  min-height: 107vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.special-gradient-section {
+  background-size: 100% calc(100vh);
+  min-height: 88vh;
+}
+
+.special-gradient-section-long {
+  background-size: 150% calc(200vh);
+}
+
+
+.navbar {
+  border-bottom: 1px solid rgb(120, 120, 120);
+}
+
+.navbar-transparent .navbar-nav {
+  margin-left: 140px;
+}
+
+.navbar-transparent .navbar-nav .nav-link {
+  color: white;
+  margin-top: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: lightblue;
+  transform: scaleX(0);
+  transition: transform 0.7s;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  animation: moveUp 0.7s ease forwards;
+}
+
+.navbar-brand {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-image {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  top: 100%;
+  left: auto;
+  right: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  height: 10vh; /* Adjust as needed */
+  text-align: left;
+  margin-left: -940px; /* Adjust as needed */
+  margin-top: 25vh; /* Adjust as needed */
+  transform: translateY(-50%);
+}
+
+.centered-container-special {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  height: 10vh; /* Adjust as needed */
+  text-align: left;
+  margin-left: -1040px; /* Adjust as needed */
+  margin-top: 16vh; /* Adjust as needed */
+  transform: translateY(-50%);
+}
+
+.image-container {
+  text-align: right;
+  margin-top: -320px; /* Adjust as needed */
+}
+
+.image-container-stage {
+  text-align: right;
+  margin-top: -200px; /* Adjust as needed */
+}
+
+.image-container img {
+  max-width: 100%; /* Adjust as needed */
+  height: auto;
+  width: 800px; /* Adjust as needed */
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1566px) {
+  .centered-container {
+    margin-left: 0;
+    margin-top: 5vh; /* Adjust as needed */
+  }
+
+  .image-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 70%;
+    margin-top: 30px;
+  }
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.download-button:hover {
+  background-image: linear-gradient(315deg, #4fdbd5 0%, #53ada9 74%);
+}
+
+.download-button img {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.download-button img {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.line {
+  width: 80%;
+  height: 2px;
+  background-color: lightslategray;
+  margin-bottom: 10px; /* Adjust as needed */
+  margin-left: 140px;
+}
+
+.indexText {
+  margin-left: 140px;
+  margin-right: 140px;
+  font-size: 40px;
+  color: #6190E8;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.footer {
+  background-color: #112244;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.img-logo {
+  width: 50;
+  height: 50px;
+  margin: 10px;
+}
+
+.circular-image {
+  margin-top: -18px;
+  border-radius: 50%;
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  max-width: 100%;
+  max-height: 700px; /* Adjust the size as needed */
+  object-fit: cover;
+}
+
+.gradientText {
+  color: white;
+  font-size: 2.5rem;
+  font-family: 'Roboto Condensed';
+}
+
+.gradientText2 {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Roboto Condensed';
+  margin: 10px;
+}
+
+.aboutText {
+  color: black;
+}
+
+.image-container-formulieren {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.horizontal-image {
+  width: 400px; /* Adjust the width as per your requirements */
+  transition: transform 0.3s ease;
+}
+
+.image-with-text {
+  text-align: center;
+  position: relative;
+}
+
+.image-with-text:hover .horizontal-image {
+  transform: scale(1.1);
+}
+
+.imgText {
+  color: white;
+  font-size: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.btncontainer {
+
+  align-items: stretch;
+  justify-content: center;
+ 
+  height: 80vh;
+}
+
+.buttonGIP {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: #6190E8;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.buttonGIP:hover {
+  background: #5084e4;
+}
+
+.giptext {
+  color: white;
+  font-size: 3.5rem;
+}
+    
+.burndown {
+  width: 600px;
+  height: 500px;
+  margin-left: 1000px;
+}
